@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-    }
+   
     
     stage('Check-Git-Secrets'){
         steps{
@@ -15,4 +15,5 @@ pipeline {
         sh 'docker run -t gesellix/trufflehog --json https://github.com/mmuqeem44/DevSecOps.git > trufflehog'    
         } 
     }
+  }
 }
